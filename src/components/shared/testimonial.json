@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_testimonials",
+  "info": {
+    "displayName": "testimonial"
+  },
+  "options": {},
+  "attributes": {
+    "quote": {
+      "type": "text"
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "author_role": {
+      "type": "string"
+    },
+    "author_avatar": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "stats": {
+      "type": "component",
+      "component": "shared.stat-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

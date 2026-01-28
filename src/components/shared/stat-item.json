@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_stat_items",
+  "info": {
+    "displayName": "stat_item",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
