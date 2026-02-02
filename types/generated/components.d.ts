@@ -1,5 +1,30 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedHighlights extends Struct.ComponentSchema {
+  collectionName: 'components_shared_highlights';
+  info: {
+    displayName: 'highlights';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedSocialLinks extends Struct.ComponentSchema {
+  collectionName: 'components_shared_social_links';
+  info: {
+    displayName: 'social_links';
+  };
+  attributes: {
+    active: Schema.Attribute.Boolean;
+    platform: Schema.Attribute.Enumeration<
+      ['Facebook', 'Twitter', 'Linkedin', 'Github', 'Instagram']
+    >;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface SharedStatItem extends Struct.ComponentSchema {
   collectionName: 'components_shared_stat_items';
   info: {
@@ -31,6 +56,8 @@ export interface SharedTestimonial extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.highlights': SharedHighlights;
+      'shared.social-links': SharedSocialLinks;
       'shared.stat-item': SharedStatItem;
       'shared.testimonial': SharedTestimonial;
     }
