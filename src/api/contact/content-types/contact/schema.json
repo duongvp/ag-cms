@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    },
+    "property_type": {
+      "type": "enumeration",
+      "enum": [
+        "residential",
+        "commercial",
+        "industrial"
+      ]
+    }
+  }
+}

@@ -569,6 +569,40 @@ export interface ApiCareerCareer extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiContactContact extends Struct.CollectionTypeSchema {
+  collectionName: 'contacts';
+  info: {
+    displayName: 'Contact';
+    pluralName: 'contacts';
+    singularName: 'contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    full_name: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact.contact'
+    > &
+      Schema.Attribute.Private;
+    message: Schema.Attribute.Text;
+    phone_number: Schema.Attribute.String;
+    property_type: Schema.Attribute.Enumeration<
+      ['residential', 'commercial', 'industrial']
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCustomerCustomer extends Struct.CollectionTypeSchema {
   collectionName: 'customers';
   info: {
@@ -1545,6 +1579,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::blog.blog': ApiBlogBlog;
       'api::career.career': ApiCareerCareer;
+      'api::contact.contact': ApiContactContact;
       'api::customer.customer': ApiCustomerCustomer;
       'api::department.department': ApiDepartmentDepartment;
       'api::faq-category.faq-category': ApiFaqCategoryFaqCategory;
