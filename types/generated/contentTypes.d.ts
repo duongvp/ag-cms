@@ -498,6 +498,39 @@ export interface ApiBlogBlog extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiCareerApplicationCareerApplication
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'career_applications';
+  info: {
+    displayName: 'CareerApplication';
+    pluralName: 'career-applications';
+    singularName: 'career-application';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    cover_letter: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    full_name: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::career-application.career-application'
+    > &
+      Schema.Attribute.Private;
+    position: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    resume: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCareerCareer extends Struct.CollectionTypeSchema {
   collectionName: 'careers';
   info: {
@@ -1578,6 +1611,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::blog.blog': ApiBlogBlog;
+      'api::career-application.career-application': ApiCareerApplicationCareerApplication;
       'api::career.career': ApiCareerCareer;
       'api::contact.contact': ApiContactContact;
       'api::customer.customer': ApiCustomerCustomer;

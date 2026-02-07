@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "career_applications",
+  "info": {
+    "singularName": "career-application",
+    "pluralName": "career-applications",
+    "displayName": "CareerApplication"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "resume": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "cover_letter": {
+      "type": "text"
+    },
+    "position": {
+      "type": "string"
+    },
+    "full_name": {
+      "type": "string"
+    }
+  }
+}
