@@ -19,11 +19,11 @@ export default {
 
                                 <!-- Header -->
                                 <tr>
-                                <td style="background:#22c55e;padding:20px 28px;">
-                                    <h2 style="margin:0;color:#ffffff;font-size:20px;font-weight:600;">
-                                    Asia Group – Hồ sơ ứng tuyển mới
-                                    </h2>
-                                </td>
+                                    <td style="background:#22c55e;padding:20px 28px;">
+                                        <h2 style="margin:0;color:#ffffff;font-size:20px;font-weight:600;">
+                                        Asia Group – Hồ sơ ứng tuyển mới
+                                        </h2>
+                                    </td>
                                 </tr>
 
                                 <!-- Body -->
