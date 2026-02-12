@@ -525,7 +525,7 @@ export interface ApiCareerApplicationCareerApplication
       Schema.Attribute.Private;
     position: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    resume: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    resume: Schema.Attribute.Media<'files'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

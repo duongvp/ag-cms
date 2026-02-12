@@ -89,6 +89,7 @@ export default {
                                 <td style="background:#fafafa;padding:14px 28px;
                                             font-size:12px;color:#777;text-align:center;">
                                     Email này được gửi tự động từ hệ thống tuyển dụng Asia Group.
+                                    
                                 </td>
                                 </tr>
 
