@@ -17,9 +17,7 @@
     "resume": {
       "type": "media",
       "multiple": false,
-      "allowedTypes": [
-        "files"
-      ]
+      "allowedTypes": ["files"]
     },
     "cover_letter": {
       "type": "text"
